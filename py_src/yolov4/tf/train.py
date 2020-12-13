@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 from os import makedirs, path, chmod, stat
+import stat as sta
 import subprocess
 
 import tensorflow as tf
@@ -378,6 +379,6 @@ class SaveWeightsCallback(Callback):
             print ("git push")
             script = "./gitpush.sh"
             st = stat(script)
-            chmod(script, st.st_mode | stat.S_IEXEC)
+            chmod(script, st.st_mode | sta.S_IEXEC)
             subprocess.call(script)
             print ("end push")
