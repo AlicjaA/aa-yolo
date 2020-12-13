@@ -1,2 +1,12 @@
 
 .idea/
+
+py_src/__pycache__/
+
+py_src/yolov4/__pycache__/
+
+py_src/yolov4/common/__pycache__/
+
+py_src/yolov4/model/__pycache__/
+
+py_src/yolov4/tf/__pycache__/
