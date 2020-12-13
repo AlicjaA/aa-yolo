@@ -369,6 +369,12 @@ class SaveWeightsCallback(Callback):
             "{}-final{}".format(self.path_prefix, self.extension),
             weights_type=self.weights_type,
         )
+        print("git push")
+        script = "./gitpush.sh"
+        st = stat(script)
+        chmod(script, st.st_mode | sta.S_IEXEC)
+        subprocess.call(script)
+        print("end push")
 
     def on_epoch_end(self, epoch, logs=None):
         if (epoch + 1) % self.epoch_per_save == 0:
@@ -376,9 +382,9 @@ class SaveWeightsCallback(Callback):
                 "{}-{}{}".format(self.path_prefix, epoch + 1, self.extension),
                 weights_type=self.weights_type,
             )
-            print ("git push")
-            script = "./gitpush.sh"
-            st = stat(script)
-            chmod(script, st.st_mode | sta.S_IEXEC)
-            subprocess.call(script)
-            print ("end push")
+        print("git push")
+        script = "./gitpush.sh"
+        st = stat(script)
+        chmod(script, st.st_mode | sta.S_IEXEC)
+        subprocess.call(script)
+        print("end push")
