@@ -10,3 +10,5 @@ py_src/yolov4/common/__pycache__/
 py_src/yolov4/model/__pycache__/
 
 py_src/yolov4/tf/__pycache__/
+
+.ipynb_checkpoints/

@@ -204,6 +204,7 @@ class YOLOv4(BaseClass):
                     candidate[0], shape=(1, grid_size[0] * grid_size[1] * 3, -1)
                 )
             )
+        print ("YOLO-predict-function")
         return tf.concat(_candidates, axis=1)
 
     def predict(
@@ -237,6 +238,7 @@ class YOLOv4(BaseClass):
             score_threshold=score_threshold,
         )
         pred_bboxes = self.fit_pred_bboxes_to_original(pred_bboxes, frame.shape)
+        print ("YOLO-predict bbox: ", pred_bboxes)
         return pred_bboxes
 
     ############

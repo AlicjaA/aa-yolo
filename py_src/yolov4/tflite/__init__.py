@@ -124,4 +124,5 @@ class YOLOv4(BaseClass):
             score_threshold=score_threshold,
         )
         pred_bboxes = self.fit_pred_bboxes_to_original(pred_bboxes, frame.shape)
+        print ("YOLO-lite-predict bbox: ", pred_bboxes)
         return pred_bboxes

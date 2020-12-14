@@ -269,6 +269,7 @@ class BaseClass:
             iou_threshold (float):
             score_threshold (float):
         """
+        print ("BaseClas predict")
         return [[0.0, 0.0, 0.0, 0.0, -1]]
 
     def inference(
@@ -310,6 +311,7 @@ class BaseClass:
             )
             exec_time = time.time() - start_time
             print("time: {:.2f} ms".format(exec_time * 1000))
+            print("BaseClass-interference bboxes: ",bboxes )
 
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
             image = self.draw_bboxes(frame, bboxes)
