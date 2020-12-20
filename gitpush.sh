@@ -7,6 +7,6 @@
 
 
 git add -A
-git commit -m "from colab"
+git commit -m "from colab chnge lr"
 #git config remote.origin.url https://$GITHUB_AUTH@github.com/$USER/$REPOSITORY.git
 git push origin main
